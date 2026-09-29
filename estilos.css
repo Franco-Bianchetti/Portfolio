@@ -6,7 +6,7 @@
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
 
 body {
     font-family: 'Open Sans', sans-serif;
@@ -100,6 +100,10 @@ nav ul a:hover { color: var(--morado); }
 }
 
 .dos h2:not(:first-child) { margin-top: 48px; }
+
+#aptitudes {
+    padding-top: 32px;
+}
 
 .dos > p { max-width: 65ch; margin-bottom: 8px; }
 
@@ -269,3 +273,12 @@ footer p { opacity: 0.8; font-size: 0.9rem; }
     nav { justify-content: center; text-align: center; }
     nav ul { justify-content: center; gap: 16px 20px; }
 }
+
+.mensaje-estado {
+    margin-top: 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.mensaje-estado.exito { color: #1a7a4c; }
+.mensaje-estado.error { color: #c0392b; }

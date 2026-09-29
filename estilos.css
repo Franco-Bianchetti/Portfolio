@@ -24,9 +24,35 @@ header {
     box-shadow: 0 2px 12px rgba(20, 20, 43, 0.08);
     position: sticky;
     top: 0;
+    z-index: 10;
+}
+
+nav {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
 header h3 { font-size: 1.2rem; font-weight: 800; }
+
+nav ul {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul a {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--tinta);
+}
+
+nav ul a:hover { color: var(--morado); }
 
 
 .uno {
@@ -143,6 +169,69 @@ header h3 { font-size: 1.2rem; font-weight: 800; }
 }
 .card a:hover { color: var(--morado); }
 
+.cuatro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 24px 40px 88px;
+}
+
+.cuatro h2 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.cuatro > p {
+    margin-bottom: 28px;
+    max-width: 60ch;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-width: 460px;
+}
+
+.formulario-contacto label {
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-top: 12px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 12px 14px;
+    border: 1.5px solid #c9d4e8;
+    border-radius: 10px;
+    background: var(--fondo);
+    resize: vertical;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: none;
+    border-color: var(--morado);
+}
+
+.formulario-contacto button {
+    margin-top: 20px;
+    align-self: flex-start;
+    padding: 12px 28px;
+    background: var(--morado);
+    color: var(--blanco);
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formulario-contacto button:hover { background: var(--tinta); }
+
 footer {
     background: var(--tinta);
     color: var(--blanco);
@@ -175,3 +264,8 @@ footer h2 { font-size: 1.8rem; font-weight: 800; margin-bottom: 24px; }
 .contacto img.contacto:hover { opacity: 0.7; }
 
 footer p { opacity: 0.8; font-size: 0.9rem; }
+
+@media (max-width: 700px) {
+    nav { justify-content: center; text-align: center; }
+    nav ul { justify-content: center; gap: 16px 20px; }
+}
